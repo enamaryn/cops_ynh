@@ -105,6 +105,10 @@ for filesharing in "nextcloud" "owncloud"; do
     }
 done
 
+# créer un dossier files, ajoute metadata.db d'une bibliotheque vide
+sudo mkdir /var/www/cops/files
+wget -P /var/www/cops/files/ enamaryn.free.fr/--essai--/metadata.db
+
 # Set permissions
 sudo chmod ug+rw -R $final_path
 sudo chown -hR $runninguser:$runninguser $final_path
